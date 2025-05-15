@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 z-50">
@@ -15,18 +17,10 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex space-x-6 text-sm">
-          <div className="relative group">
-            <button className="hover:text-blue-600">Home</button>
-          </div>
-          <div className="relative group">
-            <button className="hover:text-blue-600">Solutions</button>
-          </div>
-          <div className="relative group">
-            <button className="hover:text-blue-600">Resources</button>
-          </div>
-          <a href="#" className="hover:text-blue-600">
-            Price
-          </a>
+          <Link to="/">Home</Link>
+          <Link to="/price">Price</Link>
+          <Link to="/resources">Resources</Link>
+          <Link to="/solutions">Solutions</Link>
         </nav>
 
         <div className="flex items-center space-x-4 text-sm">
