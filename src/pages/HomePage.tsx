@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Header from "../components/header";
 import actor1 from "../assets/actor1.webp";
 import actor2 from "../assets/actor2.webp";
 import actor3 from "../assets/actor3.webp";
@@ -13,7 +12,6 @@ const actors = [
 const HomePage = () => {
   return (
     <>
-      <Header />
       <div className="min-h-screen pt-20">
         <section className="text-center px-4 py-12">
           <motion.h1

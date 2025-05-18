@@ -20,7 +20,7 @@ const pricingPlans = [
 
 const Price = () => {
   return (
-    <div className="bg-yellow-400 text-stone-900 min-h-screen pt-20 px-4">
+    <div className="text-stone-900 h-auto pt-20 px-4">
       <motion.h1
         className="text-4xl font-bold text-center mb-6"
         initial={{ opacity: 0, y: -30 }}
