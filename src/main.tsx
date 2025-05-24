@@ -9,6 +9,8 @@ import Solutions from "./pages/Solutions";
 import Resources from "./pages/Resources";
 import Price from "./pages/Price";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -20,6 +22,8 @@ createRoot(document.getElementById("root")!).render(
           <Route path="resources" element={<Resources />} />
           <Route path="solutions" element={<Solutions />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </Router>
