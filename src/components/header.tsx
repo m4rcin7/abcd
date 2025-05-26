@@ -24,11 +24,18 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-4 text-sm">
-          <button className="hover:underline">Contact</button>
-          <button className="hover:underline">Login</button>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <Link className="hover:underline" to="/contact">
+            Contact
+          </Link>
+          <Link className="hover:underline" to="/login">
+            Login
+          </Link>
+          <Link
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            to="/register"
+          >
             Register
-          </button>
+          </Link>
         </div>
       </div>
     </header>
