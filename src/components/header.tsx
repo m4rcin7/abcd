@@ -7,7 +7,7 @@ const Header = () => {
         Go from idea to action faster than ever before—with our latest features
         .
         <button className="ml-2 bg-black text-white px-3 py-1 rounded text-sm hover:opacity-90">
-          Watch now
+          <Link to="/watch-now">Watch Now</Link>
         </button>
       </div>
 
