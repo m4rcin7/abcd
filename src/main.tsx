@@ -11,6 +11,7 @@ import Price from "./pages/Price";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import WatchNow from "./pages/WatchNow";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="watch-now" element={<WatchNow />} />
         </Route>
       </Routes>
     </Router>
