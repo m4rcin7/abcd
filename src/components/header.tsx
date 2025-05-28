@@ -13,7 +13,9 @@ const Header = () => {
 
       <div className="flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-2">
-          <span className="font-semibold text-lg">actor</span>
+          <Link className="font-semibold text-lg" to="/">
+            actor
+          </Link>
         </div>
 
         <nav className="hidden md:flex space-x-6 text-sm">
