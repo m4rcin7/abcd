@@ -1,46 +1,50 @@
-import { motion } from "framer-motion";
+import { useState, type FormEvent } from "react";
+import { useAuth } from "../hooks/useAuth";
 
-const Login = () => {
+const LoginPage = () => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const { login } = useAuth();
+
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (username === "user" && password === "password") {
+      const fakeUser = {
+        id: "1",
+        name: "John Doe",
+        email: "user@example.com",
+      };
+      await login(fakeUser);
+    } else {
+      alert("Invalid username or password");
+    }
+  };
+
   return (
-    <motion.div
-      className="min-h-screen flex items-center justify-center bg-gray-50 px-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">
-          Login to Your Account
-        </h2>
-        <form className="space-y-4">
+    <div>
+      <form onSubmit={handleLogin}>
+        <div>
+          <label htmlFor="username">Username:</label>
           <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
+            id="username"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
           <input
+            id="password"
             type="password"
-            placeholder="Password"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-          >
-            Login
-          </button>
-        </form>
-        <p className="mt-4 text-center text-sm text-gray-500">
-          Don't have an account?{" "}
-          <a href="/register" className="text-blue-600 hover:underline">
-            Register
-          </a>
-        </p>
-      </div>
-    </motion.div>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 };
 
-export default Login;
+export default LoginPage;
