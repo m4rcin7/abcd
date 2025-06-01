@@ -20,8 +20,8 @@ import Secret from "./pages/Secret";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <AuthProvider>
-      <Router>
+    <Router>
+      <AuthProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -42,7 +42,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="watch-now" element={<WatchNow />} />
           </Route>
         </Routes>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>
+    </Router>
   </StrictMode>
 );
