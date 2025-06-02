@@ -13,6 +13,8 @@ const LoginPage = () => {
         id: "1",
         name: "John Doe",
         email: "user@example.com",
+        password: "password",
+        username: "user",
       };
       await login(fakeUser);
     } else {
