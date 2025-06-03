@@ -17,6 +17,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import WatchNow from "./pages/WatchNow";
 import Secret from "./pages/Secret";
+import Profile from "./pages/Profile";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -39,6 +40,7 @@ createRoot(document.getElementById("root")!).render(
               }
             />
             <Route path="register" element={<Register />} />
+            <Route path="profile" element={<Profile />} />
             <Route path="watch-now" element={<WatchNow />} />
           </Route>
         </Routes>
