@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ isLoggedIn }) => {
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 z-50">
       <div className="bg-yellow-400 text-black text-sm text-center py-2 px-4">
-        Go from idea to action faster than ever before—with our latest features
-        .
-        <button className="ml-2 bg-black text-white px-3 py-1 rounded text-sm hover:opacity-90">
-          <Link to="/watch-now">Watch Now</Link>
-        </button>
+        Go from idea to action faster than ever before—with our latest features.
+        <Link to="/watch-now">
+          <button className="ml-2 bg-black text-white px-3 py-1 rounded text-sm hover:opacity-90">
+            Watch Now
+          </button>
+        </Link>
       </div>
 
       <div className="flex items-center justify-between px-6 py-4">
@@ -29,15 +30,29 @@ const Header = () => {
           <Link className="hover:underline" to="/contact">
             Contact
           </Link>
-          <Link className="hover:underline" to="/login">
-            Login
-          </Link>
-          <Link
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            to="/register"
-          >
-            Register
-          </Link>
+
+          {!isLoggedIn ? (
+            <>
+              <Link className="hover:underline" to="/login">
+                Login
+              </Link>
+              <Link
+                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                to="/register"
+              >
+                Register
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link className="hover:underline" to="/dashboard">
+                Dashboard
+              </Link>
+              <Link className="hover:underline text-red-500" to="/logout">
+                Logout
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>
