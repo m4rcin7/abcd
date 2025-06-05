@@ -15,7 +15,7 @@ const Profile = () => {
           className="w-24 h-24 rounded-full mx-auto mb-4 shadow"
         />
         <h1 className="text-3xl font-semibold text-gray-800 mb-2">
-          Welcome back!
+          Welcome back! 
         </h1>
         <p className="text-gray-600 text-base">
           This is a <span className="font-medium text-blue-600">protected</span>{" "}
