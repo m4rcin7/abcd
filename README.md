@@ -1,7 +1,8 @@
 
 # Project Description:
 
---
+A modern React + TypeScript web app with authentication
+
 ## Demo
 
 Link to [demo]()
@@ -13,3 +14,4 @@ Link to [demo]()
 
 ![image](https://github.com/user-attachments/assets/76ea87f6-0b65-4d2f-b79a-6e52b6eecf48)
 
+![image](https://github.com/user-attachments/assets/1f770144-8148-4f47-93bf-17930729184f)
