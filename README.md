@@ -6,8 +6,10 @@ A modern React + TypeScript web app with authentication
 ## Demo
 
 Link to [demo](https://abcd-sepia.vercel.app/)
+
 login: user
 password: password
+
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/b9318c10-fdda-4b17-8938-311091ce9f8a)
 
