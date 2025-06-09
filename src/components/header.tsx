@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth"; 
 
-const Header = ({ isLoggedIn }) => {
+const Header = () => {
+  const { user, logout } = useAuth();
+
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 z-50">
       <div className="bg-yellow-400 text-black text-sm text-center py-2 px-4">
@@ -31,7 +34,7 @@ const Header = ({ isLoggedIn }) => {
             Contact
           </Link>
 
-          {!isLoggedIn ? (
+          {!user ? (
             <>
               <Link className="hover:underline" to="/login">
                 Login
@@ -45,12 +48,12 @@ const Header = ({ isLoggedIn }) => {
             </>
           ) : (
             <>
-              <Link className="hover:underline" to="/dashboard">
-                Dashboard
+              <Link className="hover:underline" to="/profile">
+                Profile
               </Link>
-              <Link className="hover:underline text-red-500" to="/logout">
+              <button onClick={logout} className="hover:underline text-red-500">
                 Logout
-              </Link>
+              </button>
             </>
           )}
         </div>
